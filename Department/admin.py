@@ -9,9 +9,18 @@ class PublicIPAddressAdmin(admin.ModelAdmin):
 class PublicServiceAdmin(admin.ModelAdmin):
     list_display = ('num_port', 'service_type', 'service_descr')
 
-admin.site.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('dept_name', 'dept_descr')
+
+class PrivateIPAddressAdmin(admin.ModelAdmin):
+    list_display = ('ip_address', 'ip_descr')
+    
+class UsersAdmin(admin.ModelAdmin):
+    list_display = ('username', 'email', 'phone')
+
+admin.site.register(Department, DepartmentAdmin)
 admin.site.register(PublicService, PublicServiceAdmin)
 admin.site.register(PrivateService, PublicServiceAdmin)
 admin.site.register(PublicIPAddress, PublicIPAddressAdmin)
-admin.site.register(PrivateIPAddress)
-admin.site.register(Users)
+admin.site.register(PrivateIPAddress, PrivateIPAddressAdmin)
+admin.site.register(Users, UsersAdmin)
