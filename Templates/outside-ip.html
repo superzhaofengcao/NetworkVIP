@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>outside-ip</title>
+        <style type="text/css">
+            .table-record {width:100%,border-collapse:collapse;margin:1em 0;}
+            th,td { text-align:left;padding: .5em; border:1px solid #fff;}
+            th {background: #328aa4;color:#fff;}
+            td {background: #e5f1f4;}
+            tr.event td{background:#e5f1f4;}
+            tr.odd td {background:#f8fbfc;}
+            th.over,tr.even th.over,tr.odd th.over{background:#4a98af;}
+            th.down,tr.even th.down,tr.odd th.down{background:#bce774;}
+            td.over,tr.even td.over,tr.odd td.over{background:#ecfbd4;}
+            td.down,tr.even td.down,tr.odd td.down{background:#bce774;;color:#fff;}
+            td.selected,tr.even td.selected,tr.odd td.selected{background:#bce774;color:#555;}
+            .table-record,td {font:100% Arial, Helvetica, sans-serif;}
+            .table-record caption { padding: 0 0 5px 0;text-align:center;font-size:30px;}
+        </style>
+    </head>
+    <body>
+        <div class="table-layout">
+            <table cellspacing="1" class="table-record">
+                <caption>外网IP映射记录表</caption>
+                <tr>
+                    <th>外网IP地址</th>
+                    <th>外网端口</th>
+                    <th>内网IP地址</th>
+                    <th>内网端口</th>
+                    <th>申请人</th>
+                    <th>办公区域</th>
+                    <th>联系方式</th>
+                    <th>电子邮件</th>
+                    <th>申请日期</th>
+                    <th>使用期限</th>
+                </tr>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.ip_address }}</td>
+                    <td>{{ record.ip_service_public }}</td>
+                    <td>{{ record.ip_private_address  }}</td>
+                    <td>{{ record.ip_service_private }}</td>
+                    <td>{{ record.ip_user }}</td>
+                    <td>{{ record.ip_workspace }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>

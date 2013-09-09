@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>欢迎登录Network VIP系统</title>
+        <style type="text/css">
+            #main {width:100%;background-color:#DDD;margin:0px;line-height:150%;}
+            #header {float:left;width:100%;}
+            #header p {text-align:right;}
+            #header h1 {text-align:center;}
+            .navi ul {list-style:none;}
+            .navi li {float:left;width:100px;background:#CCC;margin-left:3px;line-height:30px;}
+            .navi {width:100%;}
+            .navi a {display:block;text-align:center;height:30px;}
+            .navi a:link {color:#666;background:#CCC;text-decoration:none;}
+            .navi a:visited {color:#666;text-decoration:none;}
+            .navi a:hover {color:#FFF;font-weight:bold;text-decoration:none;background:#F00;}
+
+            .base-info {width:49%;float:left;margin-left:3px;margin-top:1px;}
+            .base-info h1 {display:block;background-color:gray;font-size:16px;}
+
+            div.footer {padding:0.5em;background-color:gray;clear:left;}
+            
+        </style>
+    </head>
+    <body>
+        <div id="main">
+        <div id="header">
+             <h1>Network VIP管理系统</h1>
+             <p> 当前时间:{{ current_date|date:"F j,Y" }}</p>
+             <div class="navi">
+                 <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="outside-ip">外网IP资源</a></li>
+                    <li><a href="#">内网IP分配</a></li>
+                    <li><a href="#">监控数据</a></li>
+                    <li><a href="admin">管理界面</a></li>
+                 </ul>
+             </div>
+        </div>
+        <div class="base-info">
+        <h1>工作日志统计</h1> 
+                <p>工作日志</p>
+        </div>
+        <div class="base-info">
+            <h1>外网资源统计</h1>
+            <p class="item-name">公网映射数量:{{ num_publicipaddress }}</p>
+            <p>私有IP地址数量:{{ num_privateipaddress }}</p>
+            <p>公网端口数量:{{ num_publicservice }}</p>
+            <p>私有端口数量:{{ num_privateservice }}</p>
+            <p>申请部门数量:{{ num_dept }}</p>
+            <p>申请用户数量:{{ num_users }}</p>
+        </div>
+        <div class="base-info">
+            <h1>IP分配统计</h1>
+        </div>
+        <div class="base-info">
+            <h1>监控信息统计</h1>
+        </div>
+        <div class="footer">
+            Copyright 2013 ,Powered By Define.zhang
+        </div>
+    </div>
+    </body>
+</html>
