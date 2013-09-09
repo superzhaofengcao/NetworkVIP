@@ -6,5 +6,5 @@ from django.shortcuts import render_to_response
 from models import Department, PublicIPAddress
 
 def PublicIPResource(request):
-    records = PublicIPAddress.objects.all()
+    records = PublicIPAddress.objects.all() #获取所有记录
     return render_to_response('outside-ip.html',{'records':records}) 
