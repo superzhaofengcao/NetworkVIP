@@ -17,6 +17,7 @@ class PrivateIPAddressAdmin(admin.ModelAdmin):
     
 class UsersAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'phone')
+    list_filter = ('username', 'email', 'phone')
 
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(PublicService, PublicServiceAdmin)
