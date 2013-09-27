@@ -4,16 +4,21 @@ from Department.models import Department, PublicIPAddress, PrivateIPAddress, Pub
 
 
 class PublicIPAddressAdmin(admin.ModelAdmin):
-    list_display = ('ip_address', 'ip_service_public', 'ip_private_address', 'ip_service_private','ip_workspace', 'ip_user')    
+    list_display = ('ip_address', 'ip_service_public', 'ip_private_address', 'ip_service_private','ip_workspace', 'ip_user')
+    list_filter = ('ip_address', 'ip_service_public', 'ip_private_address', 'ip_service_private', 'ip_workspace', 'ip_user')
 
 class PublicServiceAdmin(admin.ModelAdmin):
     list_display = ('num_port', 'service_type', 'service_descr')
+    list_filter = ('num_port', 'service_type', 'service_descr')
 
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = ('dept_name', 'dept_descr')
+    list_filter = ('dept_name', 'dept_descr')
 
 class PrivateIPAddressAdmin(admin.ModelAdmin):
     list_display = ('ip_address', 'ip_descr')
+    list_filter = ('ip_address', 'ip_descr')
+
     
 class UsersAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'phone')

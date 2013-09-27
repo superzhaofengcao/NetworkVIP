@@ -9,6 +9,9 @@ class Department(models.Model):
     def __unicode__(self):
         return self.dept_name
 
+    class Meta:
+        ordering = ["dept_name"]
+
 class PublicService(models.Model):
     SERVICE_TYPE_CHOICE = (
             ('TCP', 'TCP协议'),
