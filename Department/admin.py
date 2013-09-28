@@ -2,6 +2,7 @@
 from django.contrib import admin
 from Department.models import Department, PublicIPAddress, PrivateIPAddress, PublicService,PrivateService, Users
 
+#后台管理界面
 
 class PublicIPAddressAdmin(admin.ModelAdmin):
     list_display = ('ip_address', 'ip_service_public', 'ip_private_address', 'ip_service_private','ip_workspace', 'ip_user')
