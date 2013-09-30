@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'Device',
     'Department',
+    'blog',
 )
 
 # A sample logging configuration. The only tangible logging
