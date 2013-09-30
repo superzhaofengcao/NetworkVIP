@@ -112,7 +112,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/idf/快盘/Dev/Python/djcode/NetworkVIP/Templates',
+    #'/Users/idf/快盘/Dev/Python/djcode/NetworkVIP/Templates',
 )
 
 INSTALLED_APPS = (
@@ -128,7 +128,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'Device',
     'Department',
-    'blog',
 )
 
 # A sample logging configuration. The only tangible logging

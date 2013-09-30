@@ -21,5 +21,4 @@ urlpatterns = patterns('',
     url(r'^style/(?P<path>.*)$', 'django.views.static.serve',{'document_root': '/Users/idf/快盘/Dev/Python/djcode/NetworkVIP/style'}),
     url(r'^$', index),
     url(r'^outside-ip$', PublicIPResource),
-    url(r'^blog/index$')
 )
